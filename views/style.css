@@ -1,0 +1,32 @@
+html{
+    width: 100%;
+}
+body{
+    background: linear-gradient(to top right, #fc2c77 0%, #6c4079 100%);
+    background-image: linear-gradient(to right top, rgb(252, 44, 119) 0%, rgb(108, 64, 121) 100%);
+    background-position-x:center;
+    background-position-y: center;
+    background-size:100%;
+    background-repeat:no-repeat ;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    width: 100%;
+}
+
+.page-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    border-radius: 4px;
+    margin-top: 5rem;
+}
+.wrapper{
+    max-width: 680px;
+    align-items: center;
+    justify-items: center;
+    border-radius: 4px;
+}

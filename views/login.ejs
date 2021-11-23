@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4 ">
+                <div class="card-header">
+                    <h3 class="card-title text-center">Connecter</h3>
+                </div>
+                <div class="card-body">
+                    <form action="api/product/new/619a87fbe98d7916a372006b" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="">name</label>
+                            <input name="name" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Details</label>
+                            <input name="details" rowspan="4"  class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">prix</label>
+                            <input name="prix"  class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">prixGrossiste</label>
+                            <input name="prixGrossiste"class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">quantite</label>
+                            <input name="quantite"  class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">images</label>
+                            <input name="images" type="file" multiple required class="form-control">
+                        </div>
+                        <button class="mt-4 btn btn-primary" type="submit">Login</button>
+                    </form>
+                    <div class="">
+                        <p>Vous avez un compte? Inscription</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
