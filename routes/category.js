@@ -6,7 +6,7 @@ const router = require("express").Router();
 const upload = multer({storage: categoryStorage()});
 
 //create a new category
-router.post("/new",upload.single("image"), createCategory);
+router.post("/new",/*upload.single("image"),*/ createCategory);
 //getAll the categories
 router.get("/all", showAll);
 //get a specific category and the associate products

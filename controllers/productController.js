@@ -8,12 +8,12 @@ const createProduct = (req,res)=>{
         Product.find({name: name})
             .then(products =>{
                 if(products.length) return res.status(401).json({error: "The Product already exixts"});
-                if(req.files){
+                //if(req.files){
                     const images = [];
                     //console.log(req.files);
-                     req.files["images"].forEach(file => {
+                    /* req.files["images"].forEach(file => {
                         images.push(file.filename);
-                    });
+                    });*/
                     const product = new Product({
                         name: name,
                         details: req.body.details,
@@ -26,7 +26,7 @@ const createProduct = (req,res)=>{
                     product.save()
                         .then(()=> res.status(201).json({error: "Create successfully"}))
                         .catch(error => res.status(401).json({error: error.message })); 
-                }
+                //}
             })
             .catch(error => res.status(401).json({ error: error.message}));
     }else{

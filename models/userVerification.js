@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-
 const userVerificationSchema = mongoose.Schema({
     userId: {type: mongoose.Types.ObjectId, ref: "User", required:true},
     uniqueString:{type: String, required:true},

@@ -7,7 +7,7 @@ const upload = multer({storage: productStorage()});
 const uploadMultiple = upload.fields([{name:"images", maxCount: 8}]);
 
 //create a new category
-router.post("/new/:catId",uploadMultiple, createProduct);
+router.post("/new/:catId",/*uploadMultiple,*/ createProduct);
 
 
 module.exports = router;
