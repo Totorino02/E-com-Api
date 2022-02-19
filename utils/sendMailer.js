@@ -14,7 +14,7 @@ const transporter = mailer.createTransport({
 });
 
 const sendMailer = ({_id, name, email}, res) =>{
-    //generate the uniqueString
+    //generate the uniqueString 
     const uniqueString = uuidv4()+_id;
     const currentUrl = "http://localhost:5000/api/user/verification";
 
