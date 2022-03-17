@@ -9,7 +9,7 @@ const createProduct = (req,res)=>{
             .then(products =>{
                 if(products.length) return res.status(401).json({error: "The Product already exixts"});
                 //if(req.files){
-                    const images = [];
+                    let images = [];
                     //console.log(req.files);
                     /* req.files["images"].forEach(file => {
                         images.push(file.filename);

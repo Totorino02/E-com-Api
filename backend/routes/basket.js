@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const {updateBasket, createBasket} = require("../controllers/basketController");
+const {updateBasket, createBasket} = require("../backend/controllers/basketController");
 
 //create a basket
 router.post("/:userId", createBasket);

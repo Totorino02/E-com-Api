@@ -51,7 +51,7 @@ const login = (req, res) =>{
                         if(!ismatched) return res.status(401).json({error: "Something went wrong"});
                         const token = jwt.sign({userId: user._id}, process.env.AUTH_TOKEN, {expiresIn: '6h'});
                         res.setHeader("authorisation", token);
-                        res.status(200).json({message: "connected !"});
+                        res.status(200).json(user);
                     })
                     .catch(error => res.status(401).json({error: "Something went wrong"}))
             })

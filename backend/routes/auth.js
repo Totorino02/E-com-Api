@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const {login, register} = require("../controllers/authController");
-const verification = require("../controllers/verificationController");
-const authorization = require("../controllers/authorizationController");
+const {login, register} = require("../backend/controllers/authController");
+const verification = require("../backend/controllers/verificationController");
+const authorization = require("../backend/controllers/authorizationController");
 
 //register users and send a confirmation mail
 router.get("/", (req, res)=>{
