@@ -1,0 +1,18 @@
+.bloc-parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    width: 100vw;
+    padding: 1rem;
+    text-align: start;
+}
+
+.login{
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+ 

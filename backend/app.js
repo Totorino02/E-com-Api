@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
+const cors = require('cors');
 require("ejs");
 require("dotenv").config();
 const path = require("path")
@@ -16,18 +17,19 @@ const port = process.env.PORT || 5000;
 
 app.use(morgan("dev"));
 app.use(express.json());
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({extended: false}));
+app.use(cors);
 app.use((req,res,next)=>{
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, UPDATE, DELETE, ");
     res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content, Accept, Content-Type, Authorization");
     next();
 });
-
+/*
 app.set("views", './views');
 app.set("view engine", 'ejs');
 app.engine('ejs', require('ejs').__express);
-
+*/
 //mongodb connection
 mongoose.connect(process.env.DB_URI,{
     useNewUrlParser: true,
@@ -35,10 +37,10 @@ mongoose.connect(process.env.DB_URI,{
     })
     .then(() => console.log("Database connected !"))
     .catch((error) => console.log(error));
-
+/*
 //entry point for all conserne users
 app.use(express.static(__dirname + '/views/'));
-
+*/
 //routes
 app.use("/api/user", AuthRouter);
 app.use("/api/category", CategoryRouter);

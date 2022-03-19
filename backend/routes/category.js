@@ -1,5 +1,5 @@
 const multer = require("multer");
-const { createCategory, show, showAll, updateCategory, deleteCategory } = require("../backend/controllers/categoryController");
+const { createCategory, show, showAll, updateCategory, deleteCategory } = require("../controllers/categoryController");
 const {categoryStorage} = require("../utils/saveImage");
 const router = require("express").Router();
 

@@ -1,6 +1,6 @@
 const multer = require("multer");
-const { createProduct } = require("../backend/controllers/productController");
-const product = require("../backend/models/product");
+const { createProduct } = require("../controllers/productController");
+const product = require("../models/product");
 const {productStorage} = require("../utils/saveImage");
 const router = require("express").Router();
 const upload = multer({storage: productStorage()});
